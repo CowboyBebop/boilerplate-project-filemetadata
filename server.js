@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
   });
 
 const apiRouter = require('./routes/api');
-app.use('/api/exercise', apiRouter);
+app.use('/api', apiRouter);
 
 app.get('/hello', function(req, res){
   res.json({greetings: "Hello, API"});
