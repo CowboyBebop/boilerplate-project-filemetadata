@@ -1,6 +1,7 @@
 'use strict';
 
 var express = require('express');
+var multer  = require('multer')
 var cors = require('cors');
 
 // require and use "multer"...
@@ -13,6 +14,9 @@ app.use('/public', express.static(process.cwd() + '/public'));
 app.get('/', function (req, res) {
      res.sendFile(process.cwd() + '/views/index.html');
   });
+
+const apiRouter = require('./routes/api');
+app.use('/api/exercise', apiRouter);
 
 app.get('/hello', function(req, res){
   res.json({greetings: "Hello, API"});
