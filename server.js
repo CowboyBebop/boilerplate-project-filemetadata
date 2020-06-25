@@ -1,7 +1,6 @@
 'use strict';
 
 var express = require('express');
-var multer  = require('multer')
 var cors = require('cors');
 
 // require and use "multer"...
